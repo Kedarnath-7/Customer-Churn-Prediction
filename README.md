@@ -1,7 +1,7 @@
 # Customer Churn Prediction — Model Development, Validation & Deployment
-# Course: Inferential Statistics
-# Author: Kedarnath Nagaradone
-# Project Overview
+## Course: Inferential Statistics
+## Author: Kedarnath Nagaradone
+## Project Overview
 
 Customer churn represents one of the biggest challenges for subscription-based and telecom industries.
 The objective of this project is to develop, validate, compare, and deploy a predictive model that identifies customers likely to churn, enabling proactive retention strategies.
@@ -10,7 +10,7 @@ This project applies inferential statistics and predictive modeling concepts usi
 Models were built using the CHAID (Decision Tree) and Logistic Regression algorithms, validated with accuracy and ROC-AUC metrics, and prepared for real-world deployment.
 
 
-# Objectives
+## Objectives
 
 Develop a churn prediction model using statistical inference and machine learning.
 
@@ -23,7 +23,7 @@ Deploy the best-performing model using Python tools (joblib, pickle).
 Propose a framework for model updating and automation.
 
 
-# Dataset Description
+## Dataset Description
 
 Dataset Source: Kaggle – Telco Customer Churn (blastchar)
 
@@ -45,7 +45,7 @@ Version Control	Git & GitHub
 Dataset Source	Kaggle (blastchar)
 
 
-# Data Preparation
+## Data Preparation
 
 Converted TotalCharges to numeric (pd.to_numeric(errors='coerce'))
 
@@ -60,7 +60,7 @@ One-hot encoded categorical variables using pd.get_dummies()
 Target variable: Churn → {Yes: 1, No: 0}
 
 
-# Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 Key findings:
 
@@ -75,7 +75,7 @@ Electronic check users exhibit higher churn.
 Fiber optic internet users show greater churn tendencies.
 
 
-# EDA Visuals
+## EDA Visuals
 Figure	Description
 Figure 1	Churn Distribution
 Figure 2	Churn by Contract Type
@@ -84,8 +84,8 @@ Figure 4	Churn by Payment Method
 Figure 5	Correlation Matrix
 
 
-# Model Development
-
+## Model Development
+ 
 Two models were developed and compared:
 
 1. CHAID (Decision Tree)
@@ -109,13 +109,13 @@ Predicts churn probability (0–1 range).
 Offers statistical inference on each variable’s contribution.
 
 
-# Model Evaluation and Comparison
+## Model Evaluation and Comparison
 Model	Accuracy	ROC-AUC
 CHAID (Decision Tree)	0.7754	0.8130
 Logistic Regression	0.7875	0.8297
 
 
-# Logistic Regression slightly outperformed CHAID.
+## Logistic Regression slightly outperformed CHAID.
 It is selected as the final deployed model due to higher AUC and stability.
 
 Figures:
@@ -127,7 +127,7 @@ Figure 7: Lift & Gains Chart (Logistic Regression)
 Figure 8: Feature Importances (CHAID Decision Tree)
 
 
-# Model Deployment
+## Model Deployment
 Saving and Loading Model
 import joblib
 joblib.dump(lr_model, "models/logistic_churn_model.joblib")
@@ -148,7 +148,7 @@ Batch Scoring: Daily churn score updates in CRM.
 API Endpoint: Real-time churn prediction using Flask/FastAPI.
 
 
-# Visuals and Results
+## Visuals and Results
 Figure	File
 1	figure1_churn_distribution.png
 2	figure2_churn_by_contract.png
@@ -160,7 +160,7 @@ Figure	File
 8	figure8_feature_importances.png
 
 
-# Installation & Usage
+## Installation & Usage
 Prerequisites
 
 Python ≥ 3.9
@@ -179,7 +179,7 @@ Predict churn
 model.predict_proba(new_data)[:,1]
 
 
-# Performance Summary
+## Performance Summary
 
 Final Model: Logistic Regression
 
@@ -192,7 +192,7 @@ Top Factors: Tenure, Internet Service Type, Monthly Charges
 Key Insight: Customers with shorter tenure and fiber optic internet are most prone to churn.
 
 
-# Future Enhancements
+## Future Enhancements
 
 Introduce Random Forest / XGBoost for ensemble performance.
 
@@ -203,7 +203,7 @@ Integrate cost-sensitive learning based on customer value.
 Develop real-time churn prediction API.
 
 
-# References
+## References
 
 Kaggle: Telco Customer Churn Dataset
 
@@ -212,7 +212,7 @@ scikit-learn Documentation
 IBM SPSS Modeler Guide (for CHAID algorithm reference)
 
 
-# Contact
+## Contact
 
 Author: Kedarnath Nagaradone
 Email: kn3510@srmist.edu.in
