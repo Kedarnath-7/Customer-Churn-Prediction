@@ -1,4 +1,4 @@
-## Customer Churn Prediction — Model Development, Validation & Deployment
+# Customer Churn Prediction — Model Development, Validation & Deployment
 # Course: Inferential Statistics
 # Author: Kedarnath Nagaradone
 # Project Overview
